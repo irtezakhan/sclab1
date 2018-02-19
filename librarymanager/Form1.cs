@@ -32,6 +32,9 @@ namespace librarymanager
             cmd.ExecuteNonQuery();
             MessageBox.Show("registration successful");
             clear();
+            this.Hide();
+            mainpage m1 = new mainpage();
+            m1.ShowDialog();
             con.Close();
         }
         void clear()
