@@ -68,12 +68,12 @@ namespace librarymanager
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+           // toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+           // statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +102,31 @@ namespace librarymanager
             {
                 childForm.Close();
             }
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addartifact f1 = new addartifact();
+            f1.ShowDialog();
+        }
+
+        private void addToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            addadmin a1 = new addadmin();
+            a1.ShowDialog();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainpage m1 = new mainpage();
+            m1.ShowDialog();
+        }
+
+        private void inspectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            checkorders c1 = new checkorders();
+            c1.ShowDialog();
         }
     }
 }

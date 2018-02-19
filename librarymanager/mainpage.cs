@@ -27,6 +27,8 @@ namespace librarymanager
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            studentlogin s1 = new studentlogin();
+            s1.ShowDialog();
 
         }
 
