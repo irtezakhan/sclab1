@@ -95,9 +95,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 17);
+            this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "enter name";
+            this.label1.Text = "enter here";
             // 
             // label2
             // 

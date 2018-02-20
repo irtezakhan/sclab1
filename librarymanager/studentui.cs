@@ -48,7 +48,7 @@ namespace librarymanager
                 con.Open();
                 MySqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from artifact where title like('%" + textBox1.Text + "%')";
+                cmd.CommandText = "select * from artifact where title like('%" + textBox1.Text + "%') or author like('%" + textBox1.Text + "%') or genre like('%" + textBox1.Text + "%')";
                 DataTable dt = new DataTable();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -100,7 +100,7 @@ namespace librarymanager
                 {
                     MySqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "insert into issue_books(reg_no,dept,issue_date,book_name) values('" + txtreg.Text + "','" + txtdept.Text + "','" + dateTimePicker1.Text + "','" + txttitle.Text + "')";
+                    cmd.CommandText = "insert into issue_books(reg_no,dept,issue_date,book_name,type) values('" + txtreg.Text + "','" + txtdept.Text + "','" + dateTimePicker1.Value.ToString() + "','" + txttitle.Text + "','" + txttype.Text + "')";
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("issue successful");
                     clear();

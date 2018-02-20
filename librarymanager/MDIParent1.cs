@@ -128,5 +128,10 @@ namespace librarymanager
             checkorders c1 = new checkorders();
             c1.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
