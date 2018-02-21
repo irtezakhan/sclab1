@@ -15,22 +15,20 @@ namespace librarymanager
     {
         MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=librarymanager");
         public Form1()
-        {
-            InitializeComponent();
-        }
+        { InitializeComponent();}
 
         private void btn1submit_Click(object sender, EventArgs e)
         {   if (txtusername.Text == "" || txtpass.Text == "")
-                MessageBox.Show("please fill mandatory fields");
+                MessageBox.Show("You can't leave mendatory fields empty. Please fill mandatory fields!!");
             else if (txtpass.Text != txtcpass.Text)
-                MessageBox.Show("passwords donot match");
+                MessageBox.Show("password fileds donot match!!");
         else
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "insert into user(firstname,lastname,reg_no,contact,address,username,password) values('" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtreg.Text + "','" + txtcontact.Text + "','" + txtaddress.Text + "','" + txtusername.Text + "','" + txtpass.Text + "')";
             cmd.ExecuteNonQuery();
-            MessageBox.Show("registration successful");
+            MessageBox.Show("Your registration is successful");
             clear();
             this.Hide();
             mainpage m1 = new mainpage();
@@ -41,10 +39,8 @@ namespace librarymanager
         {
             txtfirstname.Text = txtlastname.Text = txtreg.Text = txtcontact.Text = txtaddress.Text = txtusername.Text = txtpass.Text = txtcpass.Text = "";
         }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-          
+        { 
         }
     }
 }

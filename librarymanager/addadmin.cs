@@ -18,7 +18,6 @@ namespace librarymanager
         {
             InitializeComponent();
         }
-
         private void btn1submit_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -28,8 +27,7 @@ namespace librarymanager
             cmd.ExecuteNonQuery();
             MessageBox.Show("addition successful");
             clear();
-            this.Hide();
-           
+            this.Hide();  
             con.Close();
         }
         void clear()
@@ -38,3 +36,14 @@ namespace librarymanager
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
