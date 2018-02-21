@@ -18,9 +18,7 @@ namespace librarymanager
         {
             InitializeComponent();
             combosource.Items.Add("donation");
-            combosource.Items.Add("purchased");
-        }
-
+            combosource.Items.Add("purchased"); }
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -38,11 +36,8 @@ namespace librarymanager
         {
             txtisbn.Text = texttitle.Text = txtpublicationyear.Text = txtlanguage.Text = txtgenre.Text = txttype.Text = txtauthor.Text = txtcopies.Text = txtprice.Text = "";
         }
-
         private void combosource_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        {}
     }
     
 }

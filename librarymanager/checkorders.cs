@@ -26,7 +26,6 @@ namespace librarymanager
                 con.Close();
             }
             con.Open();
-            
         }
         public void fillbooks(string reg_no)
         {
@@ -42,25 +41,18 @@ namespace librarymanager
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             panel2.Visible = true;
             fillbooks(textBox1.Text);
         }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             panel3.Visible = true;
@@ -77,7 +69,6 @@ namespace librarymanager
             {
                 bookname.Text = dr["book_name"].ToString();
                 issuedate.Text = dr["issue_date"].ToString();
-
             }
         }
 
@@ -103,7 +94,7 @@ namespace librarymanager
                 }
                 else
                 {
-                    MessageBox.Show("book was returned in time");
+                    MessageBox.Show("book was returned within time");
                 }
             }
           else  if (dataGridView1.SelectedCells[6].Value.ToString() == "journal")
@@ -116,7 +107,7 @@ namespace librarymanager
                 }
                 else
                 {
-                    MessageBox.Show("journal was returned in time");
+                    MessageBox.Show("journal was returned within time");
                 }
             }
         }

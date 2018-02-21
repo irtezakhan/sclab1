@@ -18,12 +18,9 @@ namespace librarymanager
         {
             InitializeComponent();
         }
-
         private void adminlogin_Load(object sender, EventArgs e)
         {
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -37,8 +34,7 @@ namespace librarymanager
             count = Convert.ToInt32(dt.Rows.Count.ToString());
             if (count==0)
             {
-                MessageBox.Show("username and password doesnot match");
-
+                MessageBox.Show("username and password donot match");
             }
             else
             {
@@ -47,7 +43,6 @@ namespace librarymanager
                 ad.ShowDialog();
             }
             con.Close();
-
         }
     }
 }

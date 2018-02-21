@@ -76,7 +76,6 @@ namespace librarymanager
         {
 
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -93,8 +92,7 @@ namespace librarymanager
             {
                 if (count > 2)
                 {
-                    MessageBox.Show("book cannot be issued");
-
+                    MessageBox.Show("Book cannot be issued as you already have 3 books.!! Please return previous one to issue a new one");
                 }
                 else
                 {
@@ -102,7 +100,7 @@ namespace librarymanager
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = "insert into issue_books(reg_no,dept,issue_date,book_name,type) values('" + txtreg.Text + "','" + txtdept.Text + "','" + dateTimePicker1.Value.ToString() + "','" + txttitle.Text + "','" + txttype.Text + "')";
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("issue successful");
+                    MessageBox.Show("issued successfully");
                     clear();
                     con.Close();
                 }
@@ -111,7 +109,7 @@ namespace librarymanager
             {
                 if (count > 1)
                 {
-                    MessageBox.Show("journal cannot be issued");
+                    MessageBox.Show("Journal cannot be issued as you already have 2 journals. Please return previous one to issue a new one");
 
                 }
                 else
@@ -120,12 +118,11 @@ namespace librarymanager
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = "insert into issue_books(reg_no,dept,issue_date,book_name) values('" + txtreg.Text + "','" + txtdept.Text + "','" + dateTimePicker1.Text + "','" + txttitle.Text + "')";
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("issue successful");
+                    MessageBox.Show("issued successfully");
                     clear();
                     con.Close();
                 }
             }
-        
         }
         void clear()
         {
@@ -134,7 +131,6 @@ namespace librarymanager
 
         private void label7_Click(object sender, EventArgs e)
         {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
